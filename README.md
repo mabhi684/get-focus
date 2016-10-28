@@ -22,7 +22,6 @@ Now in the code
  this.status == 200, 
  it is checking for the complete state and it makes sure that the status is 200 [ok]
 
-if(xml_req.readyState == 4 && xml_req.status == 200){
 
 
 
