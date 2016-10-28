@@ -1,0 +1,56 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+
+<title>Slider</title>
+
+</head>
+
+<body>
+
+  <h1>Slider With JavaScript</h1>
+
+            <img src="http://sugartin.info/wp-content/uploads/2013/11/logo-150x150.png" width="500" height="300" id="slideshow"/>
+
+<script type="text/javascript">
+
+var image=new Array("http://sugartin.info/wp-content/uploads/2013/11/logo-150x150.png",
+
+                    "https://d13yacurqjgara.cloudfront.net/users/815278/screenshots/2375130/random-turtle.gif",
+
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcNWr4yiWqnrQZgMJGF-U9jBXwqhCjwaFSf6niYZ10qLMhMarn");
+
+var num=0;
+
+function slideshow_automatic()
+
+{
+
+            if (num<image.length)
+
+            {
+
+                         num++;
+
+            }
+
+            if (num==image.length)
+
+       num=0;
+
+   setTimeout("slideshow_automatic()",4000) ;
+
+   document.getElementById("slideshow").src=image[num];
+
+   }
+
+ slideshow_automatic();
+
+</script>
+
+</body>
+
+</html>
+
