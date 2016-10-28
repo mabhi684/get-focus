@@ -5,12 +5,12 @@ var xmlhttp = new XMLHttpRequest();
 var url = "data.json";
 
 xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) { // readyState == 4 request finished and response is ready  status: 200: "OK" 
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr);
     }
 };
-xmlhttp.open("GET", url, true);
+xmlhttp.open("GET", url, true); //true means assynchronus request That means the code does not pause until the http request is complete
 xmlhttp.send();
 
 function myFunction(arr) {
